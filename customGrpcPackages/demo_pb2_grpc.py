@@ -17,7 +17,7 @@ class GRPCDemoStub(object):
     """
     self.SimpleMethod = channel.unary_unary(
         '/demo.GRPCDemo/SimpleMethod',
-        request_serializer=demo__pb2.Response.SerializeToString,
+        request_serializer=demo__pb2.Request.SerializeToString,
         response_deserializer=demo__pb2.Response.FromString,
         )
     self.CStreamMethod = channel.stream_unary(
@@ -75,7 +75,7 @@ def add_GRPCDemoServicer_to_server(servicer, server):
   rpc_method_handlers = {
       'SimpleMethod': grpc.unary_unary_rpc_method_handler(
           servicer.SimpleMethod,
-          request_deserializer=demo__pb2.Response.FromString,
+          request_deserializer=demo__pb2.Request.FromString,
           response_serializer=demo__pb2.Response.SerializeToString,
       ),
       'CStreamMethod': grpc.stream_unary_rpc_method_handler(

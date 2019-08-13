@@ -40,12 +40,12 @@ func main() {
 	*/
 	// 每个方法单独测试时，没有问题
 
-	//CallSimpleMethod(client)
-	//
-	//CallCStreamMethod(client)
-	//
-	//CallSStreamMethod(client)
-	//
+	CallSimpleMethod(client)
+
+	CallCStreamMethod(client)
+
+	CallSStreamMethod(client)
+
 	CallTWFMethod(client)
 }
 

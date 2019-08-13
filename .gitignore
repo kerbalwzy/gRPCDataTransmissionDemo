@@ -4,7 +4,7 @@ __pycache__/
 *$py.class
 # Goland
 .idea/
-
+.DS_Store
 # C extensions
 *.so
 

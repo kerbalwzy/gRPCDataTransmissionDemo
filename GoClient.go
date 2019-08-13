@@ -14,14 +14,14 @@ import (
 )
 
 const (
-	GoRpcServerAddress = "127.0.0.1:23333"
-
-	ClientId = 0
+	GoGrpcServerAddress = "127.0.0.1:23333"
+	PyGrpcServerAddress = "127.0.0.1:23334"
+	ClientId            = 0
 )
 
 func main() {
 
-	conn, err := grpc.Dial(GoRpcServerAddress, grpc.WithInsecure())
+	conn, err := grpc.Dial(GoGrpcServerAddress, grpc.WithInsecure())
 	if err != nil {
 		log.Fatal(err.Error())
 	}
@@ -40,13 +40,13 @@ func main() {
 	*/
 	// 每个方法单独测试时，没有问题
 
-	CallSimpleMethod(client)
-
+	//CallSimpleMethod(client)
+	//
 	//CallCStreamMethod(client)
 	//
 	//CallSStreamMethod(client)
 	//
-	//CallTWFMethod(client)
+	CallTWFMethod(client)
 }
 
 // 简单模式下，直接调用client的相应方法就是普通的数据传输

@@ -88,10 +88,9 @@ func (obj *DemoServer) SStreamMethod(req *demo.Request, stream demo.GRPCDemo_SSt
 // 双向流模式 (在一次调用中, 客户端和服务器都可以向对象多次收发数据)
 func (obj *DemoServer) TWFMethod(stream demo.GRPCDemo_TWFMethodServer) error {
 	// 并发收发数据
-
+	obj.wt.Add(1)
 	// 接收数据
 	go func() {
-		obj.wt.Add(1)
 		defer obj.wt.Done()
 		log.Println("TWFMethod called, begin to recv data from client ... ")
 		for {

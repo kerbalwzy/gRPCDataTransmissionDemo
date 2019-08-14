@@ -10,4 +10,4 @@ Python和Golang的GRPC调用demo
 - [Grpc-纯Python的客户端与服务端demo](https://github.com/kerbalwzy/DailyEssay/blob/master/PythonDocs/GrpcDemo.md)
 
 ### 遇到的问题
-- [发布在grpc-go-issue#2969, 还未解决, 希望有大佬帮我看看](https://github.com/grpc/grpc-go/issues/2969)
+- [发布在grpc-go-issue#2969, 已经有大佬帮忙解决了](https://github.com/grpc/grpc-go/issues/2969)

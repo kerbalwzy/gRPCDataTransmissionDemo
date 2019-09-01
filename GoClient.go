@@ -29,17 +29,6 @@ func main() {
 
 	client := demo.NewGRPCDemoClient(conn)
 
-	// client的类型实际上是个指针， 所有下面的方法尽量不要同时调用，实测中同时调用有可能导致服务器出错
-	/*
-		出错信息如下：
-		rpc error: code = Internal desc = transport: transport: the stream is done or WriteHeader was already called
-		rpc error: code = Unavailable desc = transport is closing
-		TWFMethod called, begin to recv data from client ...
-		rpc error: code = Canceled desc = context canceled
-		panic: runtime error: invalid memory address or nil pointer dereference
-	*/
-	// 每个方法单独测试时，没有问题
-
 	CallSimpleMethod(client)
 
 	CallCStreamMethod(client)

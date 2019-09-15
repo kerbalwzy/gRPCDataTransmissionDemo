@@ -1,5 +1,4 @@
 //Golang: protoc 自动生成代码
->>> protoc -I ./ ./demo.proto --go_out=plugins=grpc:./customGrpcPackages
+//Golang: protoc auto generate codes
+>>> protoc -I ./ ./demo.proto --go_out=plugins=grpc:./
 
-//Python: protoc 自动生成代码
->>> python -m grpc_tools.protoc -I ./ ./demo.proto --python_out=./customGrpcPackages --grpc_python_out=./customGrpcPackages

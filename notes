@@ -1,4 +1,0 @@
-//Golang: protoc 自动生成代码
-//Golang: protoc auto generate codes
->>> protoc -I ./ ./demo.proto --go_out=plugins=grpc:./
-
